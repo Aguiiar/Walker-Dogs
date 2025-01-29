@@ -1,4 +1,4 @@
-/*Cadastrando informações no banco */
+
 
 "use strict";
 const readClient = () => getLocalStorage();
@@ -23,7 +23,7 @@ const saveClient = () => {
     cor: document.getElementById("cor").value,
 
     idade: document.getElementById("idade").value,
-    //Mesmo nao tendo o campo estou vinculando o meu salvamento no banco com o usuario que estou logado
+
     user: {
       uid: firebase.auth().currentUser.email,
     },
@@ -37,7 +37,7 @@ const saveClient = () => {
     .then((snapshot) => {
       const tableClient = snapshot.docs.map((doc) => ({
         ...doc.data().client,
-        uid: doc.id, //Aqui estou pegando o id gerado automatico pelo fire e as infos daqui
+        uid: doc.id, 
       }));
 
       tabelinha(tableClient);
@@ -45,9 +45,7 @@ const saveClient = () => {
   updatetable();
 };
 
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//Trazer as informações de forma automatica do banco assim que entrar na página ou dar f5
+
 
 const tabelinha = (tableClient) => {
   const tab = document.getElementById("tableClient");
@@ -81,20 +79,7 @@ const tabelinha = (tableClient) => {
   });
 };
 
-//Trazer as informações de forma automatica do banco assim que entrar na página ou dar f5
 
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-
-//------------------------------------------------------
-//------------------------------------------------------
-//Arrumando tabela, limpar dados duplicados tabela
-
-//Para não cadastrar mais de um e quando voltar a informação nao volta mais de duas tambem
-//lembrando que nao tem nada ver com o cadastrar, cadastrar já está correto, ele cadastra apenas
-//uma vez no meu banco, porem na parte de front, para mostrar na tela ele mostra como se
-//tivesse cadastrado dois, então ele cadatsra dois e retorna dois, para tirar isso basta
-//criar o clearTable e o updatetable
 const clearTable = () => {
   const rows = document.querySelectorAll("#tableClient>tbody td");
   const del = document.querySelectorAll("#tableClient>tbody tr");
@@ -104,16 +89,13 @@ const clearTable = () => {
 
 const updatetable = () => {
   const dbClient = readClient();
-  //Depois que atualizar limpar tabela
   clearTable();
 };
 
 document.getElementById("salvar").addEventListener("click", saveClient);
-/*Cadastrando informações no banco */
 
-//Arrumando tabela, limpar dados duplicados tabela
-//------------------------------------------------------
-//---
+
+
 
 addEventListener("load", (event) => {
   db.collection("cachorro")
@@ -121,14 +103,14 @@ addEventListener("load", (event) => {
     .then((snapshot) => {
       const tableClient = snapshot.docs.map((doc) => ({
         ...doc.data().client,
-        uid: doc.id, //Aqui estou pegando o id gerado automatico pelo fire e as infos daqui
+        uid: doc.id, 
       }));
 
       tabelinha(tableClient);
     });
 });
 
-/*Fazer logout quando estiver logado depois de fazer login */
+
 
 function logout() {
   firebase
@@ -142,4 +124,4 @@ function logout() {
     });
 }
 
-/*Fazer logout quando estiver logado depois de fazer login */
+

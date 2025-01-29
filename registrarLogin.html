@@ -23,12 +23,13 @@
           </ul>
         </div>
         <div class="button-menu">
-          <button class="btnCadastrase"> <a href="./registrarLogin.html">Cadastre-se</a></button>
-          <button> <a href="./login.html">Login</a></button>
+          <button class="btnCadastrase">
+            <a href="./registrarLogin.html">Cadastre-se</a>
+          </button>
+          <button><a href="./login.html">Login</a></button>
         </div>
       </div>
     </header>
-    <!--Formulario de criação de usuario-->
     <form>
       <section>
         <div class="container-login">
@@ -71,7 +72,8 @@
 
             <div class="linha-3">
               <div class="subGridLinha3">
-                <button class="teste"
+                <button
+                  class="teste"
                   type="button"
                   id="register-button"
                   onclick="cadastrar()"
@@ -102,12 +104,9 @@
         appId: "1:975390263643:web:48584a10445fd54007727e",
       };
 
-      // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
 
       const db = firebase.firestore();
-     
-
     </script>
   </body>
 </html>

@@ -12,9 +12,6 @@ td {
   padding: 0px;
 }
 
- 
-
-
 img {
   max-width: 100%;
 }
@@ -76,8 +73,6 @@ li a {
   background: #e44444;
 }
 
-/*Conteudo*/
-
 .container-conteudo {
   max-width: 1400px;
 
@@ -124,8 +119,6 @@ li a {
   margin-top: 30px;
 }
 
-/*Formulario*/
-
 .container-form {
   max-width: 800px;
   display: flex;
@@ -154,7 +147,6 @@ li a {
   color: white;
 }
 
-/*footer*/
 .container-footer {
   max-width: 1400px;
   margin: 0 auto;
@@ -172,9 +164,6 @@ li a {
   font-weight: bolder;
   position: relative;
 }
-
-/*---------------------------------------------------------------------------------------*/
-/*Sobre nos*/
 
 .container-sobre-nos {
   max-width: 1400px;
@@ -219,7 +208,6 @@ li a {
   font-family: "Times New Roman", Times, serif;
 }
 
-/*Para movimentar o botão tive que transformar em display block e depois sim o margin: 0 auto;*/
 .text-sobre button {
   display: block;
   margin: 10px auto;
@@ -233,8 +221,6 @@ li a {
   cursor: pointer;
   background: #64c7e6;
 }
-
-/*Cadastrar*/
 
 .container-cadastrar {
   display: grid;
@@ -250,8 +236,6 @@ li a {
   border-radius: 10px;
   position: relative;
 }
-
-/*Como a imagem está setada por aqui precisa inserir o heigth ou seja altura*/
 
 .formulario-cadastrar {
   width: 450px;
@@ -339,13 +323,6 @@ li a {
   font-style: oblique;
 }
 
-/*-----------------------------------------------------------------------------------------------------------------*/
-/*Inicio do css da tela de Login e cadastro Login*/
-
-/*tela Login*/
-
-/*Aqui estou falando que o container que vai segurar tudo tanto minhas imagens como textos, são
-grid*/
 .container-login {
   max-width: 1400px;
   display: grid;
@@ -354,8 +331,6 @@ grid*/
   height: 500px;
 }
 
-/*já Aqui estou falando que onde vai o meu form, é grid e coloquei tres linhas
-*/
 .formulario-login {
   display: grid;
 
@@ -384,28 +359,14 @@ grid*/
   font-weight: bolder;
 }
 
-/*Aqui na segunda linha do meu grid do formulario-Login e falei que é grid tambem
-apenas para conseguir movimentar com justify e etc*/
 .formulario-login .linha-2 {
   display: grid;
   margin-top: 25px;
-  /*justify-content: end; eu movimento da direita para esquerda*/
+
   justify-content: center;
-  /*align-items: eu movimento de cima para baixo
-  align-items: end;*/
 }
 
-/*Sempre quando quiser colocar algo a mais dentro de um grid ja feito, utilizar o um outro grid, 
-dentro do grid, só assim
-funcionar, igual fiz aqui, coloquei grid dentro de grid para funcionar
-então dentro da minha linha 2 que já é um grid eu criei um outro grid nessa classe aqui
-, fazendo assim tudo
-ficar bem alinhado e certo e justo*/
 .subGrid {
-  /*Se eu querer que fique  a label e input um do lado do outro eu coloco o codigo
-  grid-template-columns: 100px 100px; ele vai ficar certinho nos tamanho
-  */
-
   display: grid;
   gap: 10px;
   width: 300px;
@@ -413,7 +374,7 @@ ficar bem alinhado e certo e justo*/
 
 .subGrid label {
   font-size: 1.25em;
-  /*Ajustando a label de cima para baixo*/
+
   align-content: end;
   font-weight: bolder;
 }
@@ -451,13 +412,10 @@ ficar bem alinhado e certo e justo*/
   cursor: pointer;
 }
 
-/*Quando eu clicar no botão ele mostrar que está sendo clicado, sendo ativado*/
-/*Mostrar quando o botão estiver ativado eu clicar*/
 .subGridLinha3 button:active {
   opacity: 0.8;
 }
 
-/*Mostrar quando o botão estiver desabilitado*/
 .subGridLinha3 button:disabled {
   opacity: 0.7;
 }
@@ -475,12 +433,6 @@ ficar bem alinhado e certo e justo*/
   padding: 10px;
 }
 
-/*-----------------------------------------------------------------------------------------------------------------*/
-/*Fim do css da tela de Login e cadastro Login*/
-
-/*-----------------------------------------------------------------------------------------------------------------*/
-/*Inicio do css Loading*/
-
 .centralize {
   display: flex;
   justify-content: center;
@@ -489,33 +441,21 @@ ficar bem alinhado e certo e justo*/
 .loading {
   background: rgb(0, 0, 0, 0.5);
   position: fixed;
-  /*Coloquei essa parte aqui, porque no meu js do loading como estou inserindo a div por lá
-  ele estava criando o meu loading muito para baixo, então nessa linha de codigo que estou deixando marcado aqui ele
-  está arrumando e deixando certinho, iniciando lá do meu topo, sem isso ele inicia de baixo e quando coloco
-  o heigth ele joga tudo para baixo */
+
   position: absolute;
   top: 10px;
   width: 100%;
   height: 100%;
-  /*Fim do codigo para arrumar meu loading*/
+
   font-size: 1.75em;
 }
-
-/*-----------------------------------------------------------------------------------------------------------------*/
-/*Fim do css Loading*/
-
-/*Mensagens de erro do formulario na tela*/
 
 .error {
   color: white;
   background: red;
-  /*para ficar oculto, pois vou querer que só mostra quando acontecer algo*/
+
   display: none;
 }
-
-/*Mensagens de erro do formulario na tela*/
-
-/*Botão sair - logoff do login*/
 
 header {
   text-align: right;
@@ -529,18 +469,11 @@ header button {
   color: white;
 }
 
-/*Botão sair - logoff do login*/
-
-/*Nome usuario logado*/
-
 .nomeUsuarioLogado {
   font-family: "Dela Gothic One", sans-serif;
   font-size: 1em;
   margin-bottom: 10px;
 }
-/*Nome usuario logado*/
-
-/*Tela escolha*/
 
 .container-escolha {
   max-width: 1400px;
@@ -563,8 +496,6 @@ header button {
   margin: 0 auto;
 }
 
-/*Tabela informações*/
-
 #tableClient {
   width: 75%;
   height: 150px;
@@ -582,45 +513,31 @@ td {
 
 #tableServ {
   display: none;
- border: solid black 3px;
- margin: 0 auto;
- margin-top: 50px;
+  border: solid black 3px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-
-
 #tableServ td {
- border: none;
+  border: none;
 }
 
 #tableServ input {
   width: 85px;
- }
- 
+}
 
-
- .buttonCadastrarServico{
+.buttonCadastrarServico {
   border-radius: 50px;
   background: rgb(35, 99, 35, 0.7);
 
   padding: 10px;
+}
 
- }
-
-
-
-/*/*Tabela informações*/
-
-
-/*Mensagem de cadadtro realiado com sucesso do cadastro de servico*/
-
-.mensagemDeCadastroServico{
+.mensagemDeCadastroServico {
   font-size: 1.8em;
   color: green;
   font-style: italic;
   font-weight: bolder;
   text-shadow: 1px 1px 2px pink;
- text-align: center;
-
+  text-align: center;
 }
-

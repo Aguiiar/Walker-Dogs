@@ -16,11 +16,9 @@
   </head>
   <body>
     <header>
-      <!--Botão Sair-->
       <p class="nomeUsuarioLogado"></p>
       <button type="button" onclick="logout()">logoff</button>
 
-      <!--Botão Sair-->
       <div class="container-nav">
         <div class="logo">
           <img src="logo-dog.png" width="150px" height="150px" />
@@ -67,52 +65,23 @@
         </form>
       </div>
 
-      <!--Mod 1 de se fazer só descomentar e comentar o outro
-        <div class="container-cadastrar">
-
-          <form>
-                <div class="formulario-cadastrar">
-                  
-                  <div class="formBox">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" />
-    
-                    <label for="raca">Raça:</label>
-                    <input type="text" id="raca" />
-                  </div>
-    
-                  <div class="formBox">
-                    <label for="cor">Cor:</label>
-                    <input type="text" id="cor" />
-    
-                    <label for="idade">Idade:</label>
-                    <input type="number" id="idade" />
-                    </div>
-                    </div>
-                </form>
-
-        </div>
-           
-      -->
-    
-        <table id="tableClient">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Raça</th>
-              <th>Cor</th>
-              <th>Idade</th>
-              <th>Tutor</th>
-              <th>Match</th>
-              <th>Data</th>
-              <th>Hórario</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr></tr>
-          </tbody>
-        </table>
-   
+      <table id="tableClient">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Raça</th>
+            <th>Cor</th>
+            <th>Idade</th>
+            <th>Tutor</th>
+            <th>Match</th>
+            <th>Data</th>
+            <th>Hórario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+      </table>
     </section>
 
     <footer>
@@ -130,15 +99,10 @@
     </footer>
 
     <script src="cadastrandoDadosBanco.js"></script>
-    <!--script src="login.js"></script-->
 
-    <!--Script para chamar o banco-->
     <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-    <!--Script para mexer nos logins, autenticacoes-->
+
     <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
-    <!--Script para conseguir salvar no banco, tem que sempre ver as versões se nao dá problema
-    por exemplo do firebase firestore eu estava colocando na mesma do de cima e estava dando erro
-    cada um tem o seu pesquisar no proprio site do firebase-->
 
     <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
 
@@ -152,13 +116,10 @@
         appId: "1:975390263643:web:48584a10445fd54007727e",
       };
 
-      // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
 
       const db = firebase.firestore();
 
-      /*Só usuario logados que podem ter acesso a determinadas paginas, como nao estou logado
-      não tenho acesso e sou direcionado para a pagina de login */
       firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
           window.location.href = "login.html";
@@ -168,7 +129,6 @@
         usuarioLogado = document.querySelector(".nomeUsuarioLogado");
         usuarioLogado.innerHTML = usuarioFirebase;
       });
-      /*Só usuario logados que podem ter acesso a determinadas paginas */
     </script>
   </body>
 </html>
