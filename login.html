@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Matemasie&family=Unlock&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-nav">
+        <div class="logo">
+          <img src="logo-dog.png" width="150px" height="150px" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./html.html">Inicio</a></li>
+            <li>Encontre um passeador</li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li>Quero ser uma passeador</li>
+          </ul>
+        </div>
+        <div class="button-menu">
+          <button>Cadastre-se</button>
+          <button>Login</button>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container-login">
+        <div class="imagem-login">
+          <img src="/passeador.jpg" />
+        </div>
+        <div class="formulario-login">
+          <div class="linha-1">
+            <p>Seja Bem Vindo! Vamo Começar?</p>
+            <p>Login</p>
+          </div>
+
+          <div class="linha-2">
+            <div class="subGrid">
+              <label for="email">E-mail: </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="seu@email.com"
+                id="email"
+                onchange="onChangeEmail()"
+              />
+              <div class="error" id="email-required-error">
+                Email é obrigatório
+              </div>
+              <div class="error" id="email-invalid-error">Email é inválido</div>
+              <label for="password">Senha: </label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Senha"
+                id="password"
+                onchange="onChangePassword()"
+              />
+              <div class="error" id="password-required-error">
+                senha é obrigatória
+              </div>
+            </div>
+          </div>
+
+          <div class="linha-3">
+            <div class="subGridLinha3">
+              <button
+                type="button"
+                class="solid"
+                id="login-button"
+                onclick="login()"
+                disabled="true"
+              >
+                Entrar
+              </button>
+              <button
+                type="button"
+                id="recover-password-button"
+                onclick="recoverPassword()"
+                disabled="true"
+              >
+                Recuperar senha
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <!--Script para mexer nos logins, autenticacoes-->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <!--Script para conseguir salvar no banco-->
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+
+    <script src="login.js"></script>
+    <script src="loading.js"></script>
+  </body>
+</html>

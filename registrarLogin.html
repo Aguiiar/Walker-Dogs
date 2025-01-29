@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  </head>
+  <body>
+    <header>
+      <div class="container-nav">
+        <div class="logo">
+          <img src="logo-dog.png" width="150px" height="150px" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./html.html">Inicio</a></li>
+            <li>Encontre um passeador</li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li>Quero ser uma passeador</li>
+          </ul>
+        </div>
+        <div class="button-menu">
+          <button class="btnCadastrase">Cadastre-se</button>
+          <button>Login</button>
+        </div>
+      </div>
+    </header>
+    <!--Formulario de criação de usuario-->
+    <form>
+      <section>
+        <div class="container-login">
+          <div class="imagem-login">
+            <img src="/passeador.jpg" />
+          </div>
+          <div class="formulario-login">
+            <div class="linha-1">
+              <p>Seja Bem Vindo! Vamo Começar?</p>
+              <p>Cadastre seu usuário</p>
+            </div>
+
+            <div class="linha-2">
+              <div class="subGrid">
+                <label for="criacaoUsuario">Usúario: </label>
+                <input type="text" id="criacaoUsuario" />
+
+                <label for="criacaoSenha">Senha: </label>
+                <input type="password" id="criacaoSenha" />
+                <label for="criacaoSenhaConfirmacao">Confirmar Senha: </label>
+                <input type="password" id="criacaoSenhaConfirmacao" />
+                <div>
+                  <input
+                    type="radio"
+                    id="passeador"
+                    name="tipo"
+                    value="passeador"
+                  />
+                  <label for="passeador">Passeador</label>
+                  <input
+                    type="radio"
+                    id="cliente"
+                    name="tipo"
+                    value="cliente"
+                  />
+                  <label for="cliente">Cliente</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="linha-3">
+              <div class="subGridLinha3">
+                <button class="teste"
+                  type="button"
+                  id="register-button"
+                  onclick="cadastrar()"
+                >
+                  Cadastrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <script src="registrarLogin.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <!--Script para mexer nos logins, autenticacoes-->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <!--Script para conseguir salvar no banco-->
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA_XT84Ebukm9-Y5cjtuEJEztdg5qW_-Cg",
+        authDomain: "agoravai-218c6.firebaseapp.com",
+        projectId: "agoravai-218c6",
+        storageBucket: "agoravai-218c6.appspot.com",
+        messagingSenderId: "975390263643",
+        appId: "1:975390263643:web:48584a10445fd54007727e",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const db = firebase.firestore();
+     
+
+    </script>
+  </body>
+</html>

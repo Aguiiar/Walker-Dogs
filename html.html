@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+    });
+  </script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="style.css"></script>
+  </head>
+
+  <header>
+    <div class="container-nav">
+      <div class="logo">
+        <img src="logo-dog.png" width="150px" height="150px" />
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="./html.html">Inicio</a></li>
+          <li>Encontre um passeador</li>
+          <li><a href="./sobre.html">Sobre</a></li>
+          <li>Quero ser uma passeador</li>
+        </ul>
+      </div>
+      <div class="button-menu">
+        <button class="bntCadastrarLogin">Cadastre-se</button>
+        <button class="btnLogin">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <div id="header"></div>
+    <section>
+      <div class="container-conteudo">
+        <div class="conteudo-top">
+          <p class="text1">
+            Deixe que nosso passeador gaste a energia do seu Pet
+          </p>
+          <p class="domain-text">Passeador.com</p>
+        </div>
+        <div class="conteudo-center">
+          <button>Passeadores</button>
+          <button>Cadestre Seu Pet</button>
+        </div>
+        <p>Agende um Passeador</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-form">
+        <form>
+          <input type="text" id="edereco" placeholder="Endereço" />
+          <input type="text" id="data" placeholder="Data" />
+          <button class="btn-cadastrar">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-footer">
+        <div class="text-site">
+          <p>Passeador.com</p>
+        </div>
+        <div class="logos-redes">
+          <img src="facebook.png" height="32px" width="32px" />
+          <img src="linkedin.png" height="32px" width="32px" />
+          <img src="youtube.png" height="32px" width="32px" />
+          <img src="instagram.png" height="32px" width="32px" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <p class="nomeUsuarioLogado"></p>
+      <button type="button" onclick="logout()">logoff</button>
+      <div class="container-nav">
+        <div class="logo">
+          <img src="logo-dog.png" width="150px" height="150px" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./html.html">Inicio</a></li>
+            <li>Encontre um passeador</li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li>Quero ser uma passeador</li>
+          </ul>
+        </div>
+        <div class="button-menu">
+          <button class="bntCadastrarLogin">Cadastre-se</button>
+          <button class="btnLogin">Login</button>
+        </div>
+      </div>
+    </header>
+
+
+
+    <h2>Pets livres para passeio</h2>
+    <!--Sessão-->
+    <table id="tableClient">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Raça</th>
+          <th>Cor</th>
+          <th>Idade</th>
+          <th>Tutor</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+
+
+
+    <!--Tabela para cadastrar Serviço-->
+    <table id="tableServ">
+      <thead>
+        <tr>
+          <th>Nome do Pet</th>
+          <th>Tutor</th>
+          <th>Raça</th>
+          <th>Data</th>
+          <th>horario</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+ <!--Tabela para cadastrar Serviço-->
+
+    <!--/Sessão-->
+
+
+
+    <footer>
+      <div class="container-footer">
+        <div class="text-site">
+          <p>Passeador.com</p>
+        </div>
+        <div class="logos-redes">
+          <img src="facebook.png" height="32px" width="32px" />
+          <img src="linkedin.png" height="32px" width="32px" />
+          <img src="youtube.png" height="32px" width="32px" />
+          <img src="instagram.png" height="32px" width="32px" />
+        </div>
+      </div>
+    </footer>
+
+ 
+
+
+    <!--Script para chamar o banco-->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <!--Script para mexer nos logins, autenticacoes-->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <!--Script para conseguir salvar no banco, tem que sempre ver as versões se nao dá problema
+ por exemplo do firebase firestore eu estava colocando na mesma do de cima e estava dando erro
+ cada um tem o seu pesquisar no proprio site do firebase-->
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+    
+    <script src="telaAdminPasseador.js"></script>
+  </body>
+</html>

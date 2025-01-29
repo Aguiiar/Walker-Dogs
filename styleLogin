@@ -1,0 +1,132 @@
+/*tela Login*/
+
+/*Aqui estou falando que o container que vai segurar tudo tanto minhas imagens como textos, são
+grid*/
+.container-login {
+    max-width: 1400px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+  }
+  .imagem-login {
+  }
+  
+  /*já Aqui estou falando que onde vai o meu form, é grid e coloquei tres linhas
+  */
+  .formulario-login {
+    display: grid;
+  
+    grid-template-rows: 100px 1fr 1fr;
+  }
+  
+  
+  
+  .linha-1 p:nth-child(1){
+    color: rgb(80, 81, 82);
+    font-size: 1.25em;
+    text-align: end;
+    font-weight: bolder;
+    padding: 10px;
+    opacity: 0.8;
+  }
+  
+  
+  .linha-1 p:nth-child(2){
+    color: rgb(0, 0, 0);
+    font-size: 2.75em;
+    text-align: start;
+    font-family: "Dela Gothic One", sans-serif;
+      font-weight: 800;
+      font-style: oblique;
+    font-weight: bolder;
+    width: 450px;
+    margin-left: 25px;
+    font-weight: bolder;
+  }
+  
+  
+  
+  /*Aqui na segunda linha do meu grid do formulario-Login e falei que é grid tambem
+  apenas para conseguir movimentar com justify e etc*/
+  .formulario-login .linha-2 {
+    display: grid;
+    margin-top: 25px;
+    /*justify-content: end; eu movimento da direita para esquerda*/
+    justify-content: center;
+    /*align-items: eu movimento de cima para baixo
+    align-items: end;*/
+   
+  }
+  
+  /*Sempre quando quiser colocar algo a mais dentro de um grid ja feito, utilizar o um outro grid, 
+  dentro do grid, só assim
+  funcionar, igual fiz aqui, coloquei grid dentro de grid para funcionar
+  então dentro da minha linha 2 que já é um grid eu criei um outro grid nessa classe aqui
+  , fazendo assim tudo
+  ficar bem alinhado e certo e justo*/
+  .subGrid {
+    /*Se eu querer que fique  a label e input um do lado do outro eu coloco o codigo
+    grid-template-columns: 100px 100px; ele vai ficar certinho nos tamanho
+    */
+  
+    display: grid;
+    gap: 10px;
+    width: 300px;
+  }
+  
+  .subGrid label {
+    font-size: 1.25em;
+    /*Ajustando a label de cima para baixo*/
+    align-content: end;
+    font-weight: bolder;
+  }
+  
+  .subGrid input {
+  
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  
+  
+  
+  .linha-3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  
+  
+  }
+  
+  .linha-3 button{
+    width: 150px;
+  }
+  
+  .subGridLinha3{
+    display: grid;
+    grid-template-columns: 100px 100px;
+  
+  }
+  
+  .subGridLinha3 button{
+   
+    height: 50px;
+    position: relative;
+    right: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.0em;
+  }
+  
+  .subGridLinha3 button:nth-child(1){
+  background: #64c7e6;
+  }
+  
+  .subGridLinha3 button:nth-child(2){
+  width: 150px;
+  background-color: #c4e4f4;
+  
+  }
